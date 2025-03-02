@@ -27,10 +27,9 @@ const routes: Routes = [
   },
 
   {
-    path: 'productDetails/:id',
+    path: 'productDetails',
     component: ProductDetailsComponent,
     title: 'productDetails',
-    data: { renderMode: 'no-prerendering' }, // أو أي وضع آخر
   },
   {
     path: 'carts',

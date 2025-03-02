@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 // @Injectable() // appear local in module components to showing in ther como
 export class ProductsService {
+  testId: string = '';
   constructor(private _httpClient: HttpClient) {}
   getPosts(): Observable<any> {
     return this._httpClient.get('https://jsonplaceholder.typicode.com/posts');
@@ -15,7 +16,9 @@ export class ProductsService {
     return this._httpClient.get('https://fakestoreapi.com/products');
   }
   getProduct(id: string): Observable<any> {
-    return this._httpClient.get(`https://fakestoreapi.com/products/${id}`); // in this api you chose the single product by put id after the slash
+    return this._httpClient.get(
+      `https://fakestoreapi.com/products/${this.testId}`
+    ); // in this api you chose the single product by put id after the slash
   }
   getcarts(): Observable<any> {
     return this._httpClient.get(`https://fakestoreapi.com/products`); // in this api you chose the single product by put id after the slash

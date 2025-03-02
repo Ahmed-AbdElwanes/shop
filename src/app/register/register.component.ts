@@ -54,6 +54,7 @@ export class RegisterComponent {
   getProduct(id: string) {
     // for testing
     console.log(id);
+    this._Products.testId = id;
   }
   getToCart(productId: number) {
     let exist = this._Products.idNumbers.find((item) => +productId == item);
