@@ -1,0 +1,21 @@
+<app-loader></app-loader>
+<div class="container mt-5">
+  <img
+    [src]="productInfo?.image ?? 'anther img link'"
+    [alt]="productInfo?.title"
+    class="w-40 mx-auto mb-5"
+  />
+  <p class="font-bold text-lg mb-2 text-center capitalize">
+    {{ productInfo?.category }}
+  </p>
+  <p class="text-gray-600 mb-4 text-center">{{ productInfo?.title }}</p>
+  <p class="text-sm text-gray-900 px-10">{{ productInfo?.description }}</p>
+  <p class="text-indigo-600 font-bold text-right">
+    The Price: {{ productInfo?.price | currency : "EGP" }}
+  </p>
+  <button
+    class="ml-auto block mt-2.5 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
+  >
+    Add to Cart
+  </button>
+</div>

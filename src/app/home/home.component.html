@@ -1,0 +1,284 @@
+<app-loader></app-loader>
+<!-- <h1 class="text-7xl bg-green-400 mt-16 w-full p-20 text-center">Home</h1>
+<app-parent></app-parent>
+<p *ngFor="let item of ar_FromServe">{{ item + ar_FromServe[0] }}</p>
+
+<img src="public/assets/image-3.jpg" alt="cdc" />
+
+<div class="cards flex flex-wrap gap-2">
+  <div
+    *ngFor="let post of posts"
+    class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mt-5"
+  >
+    <h5
+      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+    >
+      {{ post.title }}
+    </h5>
+    <p class="font-normal text-gray-700 dark:text-gray-400">{{ post.body }}</p>
+  </div>
+</div> -->
+
+<section class="section-1">
+
+
+  <!-- Hero Section -->
+  <div class="relative h-[600px]">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?auto=format&fit=crop&w=1920&q=80"
+        class="w-full h-full object-cover"
+        alt="hero image"
+      />
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+
+    <div class="relative h-full flex items-center">
+      <div class="max-w-7xl mx-auto px-4 text-white text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">New Collection 2024</h1>
+        <p class="text-xl mb-8">Discover Premium Fashion & Tech Products</p>
+        <button
+          routerLink="../auth/regester"
+          class="bg-indigo-600 text-white px-8 py-3 text-lg rounded-full hover:bg-indigo-700 transition"
+        >
+          Shop Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Categories -->
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Shop by Category</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Clothing Category -->
+      <div
+        class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=800&q=80"
+          class="h-96 w-full object-cover transform group-hover:scale-105 transition"
+          alt="Clothing"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-6"
+        >
+          <h3 class="text-2xl font-bold mb-2">Clothing</h3>
+          <button
+            routerLink="../auth/regester"
+            class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+          >
+            Shop Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Accessories Category -->
+      <div
+        class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1591348278863-a8fb3887e2aa?auto=format&fit=crop&w=800&q=80"
+          class="h-96 w-full object-cover transform group-hover:scale-105 transition"
+          alt="Accessories"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-6"
+        >
+          <h3 class="text-2xl font-bold mb-2">Accessories</h3>
+          <button
+            routerLink="../auth/regester"
+            class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+          >
+            Shop Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Electronics Category -->
+      <div
+        class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+          class="h-96 w-full object-cover transform group-hover:scale-105 transition"
+          alt="Electronics"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-6"
+        >
+          <h3 class="text-2xl font-bold mb-2">Electronics</h3>
+          <button
+            routerLink="../auth/regester"
+            class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
+          >
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Products -->
+  <div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product 1 -->
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?auto=format&fit=crop&w=800&q=80"
+            class="h-64 w-full object-cover"
+            alt="Smart Watch"
+          />
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Smart Watch Pro</h3>
+            <p class="text-gray-600 mb-4">Advanced health tracking & GPS</p>
+            <div class="flex justify-between items-center">
+              <span class="text-indigo-600 font-bold">EGP249</span>
+              <button
+                routerLink="../auth/regester"
+                class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80"
+            class="h-64 w-full object-cover"
+            alt="Designer Bag"
+          />
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Designer Handbag</h3>
+            <p class="text-gray-600 mb-4">Premium leather collection</p>
+            <div class="flex justify-between items-center">
+              <span class="text-indigo-600 font-bold">EGP189</span>
+              <button
+                routerLink="../auth/regester"
+                class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80"
+            class="h-64 w-full object-cover"
+            alt="Wireless Headphones"
+          />
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Wireless Headphones</h3>
+            <p class="text-gray-600 mb-4">Noise cancelling technology</p>
+            <div class="flex justify-between items-center">
+              <span class="text-indigo-600 font-bold">EGP159</span>
+              <button
+                routerLink="../auth/regester"
+                class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80"
+            class="h-64 w-full object-cover"
+            alt="Running Shoes"
+          />
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">Sports Running Shoes</h3>
+            <p class="text-gray-600 mb-4">Ultra-lightweight design</p>
+            <div class="flex justify-between items-center">
+              <span class="text-indigo-600 font-bold">EGP129</span>
+              <button
+                routerLink="../auth/regester"
+                class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white w-full px-4 py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-xl font-bold mb-4">E-Shop</h4>
+          <p class="text-gray-400">
+            Your premier destination for fashion and technology
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>
+              <a href="#" class="hover:text-white transition">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition"
+                >Terms & Conditions</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>Phone: 01102190637</li>
+            <li class="text-sm">ahmedabdalwanes842&#64;gmail.com</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+          <div class="flex space-x-4 text-gray-400">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/?locale=ar_AR"
+              class="hover:text-white transition"
+              >Facebook</a
+            >
+            <a target="_blank" href="#" class="hover:text-white transition"
+              >Instagram</a
+            >
+            <a
+              target="_blank"
+              href="https://x.com/AHMEDWE26417266"
+              class="hover:text-white transition"
+              >Twitter</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>

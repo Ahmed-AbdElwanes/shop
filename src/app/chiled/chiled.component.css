@@ -1,0 +1,32 @@
+/* button {
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: rgb(45, 45, 228);
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+} */
+@media (max-width: 992px) {
+  .dad {
+    flex-direction: column;
+    width: fit-content;
+    gap: 6px;
+    padding: 30px;
+    font-size: 20px;
+  }
+  .dad img {
+    width: 80px;
+  }
+  .dad :nth-child(2) {
+    font-size: 20px;
+  }
+  .dad :nth-child(3) {
+    font-size: 16px;
+    max-height: 80px;
+  }
+}

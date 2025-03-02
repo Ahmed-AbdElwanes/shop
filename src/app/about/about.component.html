@@ -1,0 +1,212 @@
+<app-loader></app-loader>
+<!-- <p>about works!</p> -->
+<!-- interpolation = اقحام -->
+<p>The variable {{ string_1 }}</p>
+<p>My age is {{ number_1 }}</p>
+
+<!-- property binding -->
+<img [src]="imgSrc" />
+<img src="assets/imgs/image-1.jpg" alt="www" />
+<img src="assets/imgs/image-11.jpg" alt="www" />
+<img src="/assets/image-1.jpg" alt="www" />
+<img src="/assets/image-1.jpg" alt="www" />
+
+<!-- directives attribute -->
+<p [class]="bool == true ? 'event binding' : 'false'">condition</p>
+<!--ngClass التطبيق علي اكتر من كلاس باكتر من كونديشن -->
+<p
+  class="p-5"
+  [ngClass]="{ 'bg-orange-300': isActive, 'text-red-500': value < 10 }"
+>
+  directives attribute
+</p>
+<!--ngStyle  -->
+<p
+  class="p-5"
+  [ngStyle]="{
+    'background-color': isActive ? 'yellow' : 'blue',
+    'font-size': value < 10 ? '20px' : '12px'
+  }"
+>
+  directives attribute
+</p>
+
+<!-- 3- event binding -->
+<button (click)="sayHello()">Hello in console</button>
+<div class="input bg-blue-300 text-center">
+  <label for="">Name</label> <br />
+  <input class="bg-white" type="text" (keyup)="printInConsole($event)" />
+</div>
+<!--  -->
+<div class="relative">
+  <p>Static parent</p>
+  <div class="absolute bottom-10 left-20">
+    <p>Absolute child</p>
+  </div>
+</div>
+<!--  -->
+<!-- loop -->
+<p class="m-5px" *ngFor="let friend of friends">My Friend Is : {{ friend }}</p>
+
+<!-- ng-temblate زي شرط لو ترو اظهر الي في
+ التاج الاساسي لو فولس اظهر
+  التيمبلت الي معلمسنه بهاش -->
+<p *ngIf="isActive; else anyName">true</p>
+<ng-template #anyName>False: ng-template</ng-template>
+
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="10">it appeare if value = 10</p>
+  <p *ngSwitchCase="01">it appeare if value = 0</p>
+  <p *ngSwitchDefault>if any switch dos't case of write the defailt</p>
+</div>
+
+<p *ngFor="let item of ar_FromServe">{{ item }} = from apout</p>
+<!--
+_binding = ملزم
+1- one way binding ==> ts => html
+2- two way binding ==> ts => html -> ts
+
+  -one way binding:
+  1- interpolation
+  2- property binding
+  3- event binding
+
+  -two way binding: [(ngModel)] = banana in box
+  _ng-temblate
+
+_directives
+  1- structure ==> foor loop, if condition , switch case statement
+  2- attribute ==> ngClass, ngStyle
+  3- component ==>
+
+_ data transfer
+A- relations between compnents
+  1- from parent to chiled => زي مثال الاب والابن بنحط روت الابن في الب وندخله الكلاس المتغير الي هو بايندنج بس في الروت وكده المتغير دخل في البن فبالتالي نعرف نستخدمه جوه الابن
+  2- from chiled to parent => بنعلن عن متغير خاص بالارسال الي الاب  وبعد ذلك بنحط هذه المتغير وارساله بالفاليو الي هنحطه
+    ودة كله في فنكشن بتشتغل عند ايفنت مثل الضغط  فيت مارسالها للاب وبعد كده بنحط المتغير الاساسي في استعاء الابن
+    وبنشغل جوه فنكشن بتبقي البراميتر بتاعها هو الفاليو بتاعه فنكشن الابن وعنطريق فنكشن الاب بالبراميتر بتاعها الجديد
+    بنتحك فيه عن طريف فنكشن الاب
+
+B- No relations between compnents: service : is a class copmpnent , can be injected in components of the application.
+
+_component life cicle hocks
+
+  -init : ngOnInit => يُستدعى بعد إنشاء المكون وقبل عرض القالب.
+  يُستخدم للتهيئة، مثل جلب البيانات من API.
+
+  -changes : ngOnChanges => يُستدعى عند تغيير أي من المدخلات (Inputs) الخاصة بالمكون.
+  يُستخدم لمراقبة التغييرات في الخصائص المدخلة.
+
+  -destroy : ngOnDestroy => يُستدعى قبل تدمير المكون.
+  يُستخدم لتنظيف الموارد، مثل الاشتراكات، أو إلغاء مؤقتات.
+-->
+<!--
+Api:
+  1- import HttpClient in module and put it in NgModule-inports
+  2- we call in constructor func as property and giv it name
+  3- in constructor func make observable<any || post> func
+  4- observable func return httpClientName-Property.get('https://Api URL')
+  5- call service compo in orderd compo in private constructor =>  constructor(private PropertyName: ServiceName)
+  6- make func and in it this.PropertyName.observableFunc().subscribe()
+  7- in subscribe => subscribe({next: (data) => {console.log(data);},  error: (error) => console.log(error),  complete: () => console.log('complete'),})
+  -->
+
+<!--
+Form:
+ts
+1- declaer in module imports > (FormsModule, ReactiveFormsModule) and import in top
+2- Declaer loginForm: FormGroup = new FormGroup({})
+    loginForm: متغير من نوع FormGroup يمثل النموذج.
+    FormGroup: عبارة عن مجموعة من عناصر النموذج (مثل حقول الإدخال).
+3- put in FormGroup({}) => the inputs name and validators
+4- inputsName make it : new FormControl(initial value, [validators])
+-
+Html
+5- in input Html formControlName="inputName> From FormGroup"
+6- in Error element div => *ngIf="loginForm.get('inputName')?.errors && loginForm.get('inputName')?.touched"
+7- in Error element p > to show every error alone=> *ngIf="loginForm.get('inputName')?.getError('validator')"
+-->
+
+<!--
+Pipe: func filter data inputed pipe => (Built-in Pipes && Custom Pipes)
+  bult in ang
+custom pipe by my self
+مثال مع الـ Built-in Pipes:
+  تحويل النص إلى أحرف كبيرة
+<p>{{ 'hello world' | uppercase }}</p> HELLO WORLD
+
+  تنسيق التاريخ
+<p>{{ today | date:'dd/MM/yyyy' }}</p>  25/05/2024
+
+  تنسيق العملة
+<p>{{ 100 | currency:'EUR' }}</p>    €100.00
+
+= من الاخر كده هي فنكشن بنعمل فيها الي عايزينه وبترجع الداتا من المكان الي اخدته منه
+  فلزما نحط اسم البايب في الانديكس | جنبه المدخل الاساسي ونقدر نحط فاليو للمقارنة جنب اسم البايب زي ما هو موجود في
+  الريجيستر والفورم بتاثر علي عمل السيرش فحلها بندي اسم للانبت باسم البايب
+
+http interceptor => the layer between requist and response
+req <===interceptor===> server <===interceptor===> res
+craete interceptor:
+1- create service ng g s Name
+2- in service create loadingSubject = new BehaviorSubject<boolean>(false || true); => to do subscribe and git the value
+3- in service create 2 functions to edite loadingSubject to controle the interceptor by boolean
+4- create file -> (loader.interceptor.ts)  in v19 you will get a proplem in page code so take the code from this file
+5- const loadingService = inject(LoadingService); // call the sevvice to get services |الحصول على الخدمة
+6- loadingService.show(); // إظهار التحميل عند بدء الطلب
+7- return next(req).pipe(finalize(() => { loadingService.hide(); // إخفاء التحميل عند اكتمال الطلب أو حدوث خطأ
+}));
+next =  هو كائن من نوع HttpHandler يُستخدم لتنفيذ الطلب.
+req  = هو الطلب الذي تم تعديله أو تمريره كما هو.
+pipe() = (Operators) من RxJS  -> إضافة مشغلات
+  pipe() تسمح بتطبيق عمليات مثل التحويل (Mapping)، التصفية (Filtering)، أو التعامل مع الأخطاء على الـ Observable.
+finalize() = to do code after finish Observable (سواء اكتمال بنجاح أو بخطأ).
+8- (تسجيل)Interceptor in app.(config || moodule).ts
+9- import files
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { loaderInterceptor } from './interceptors/loader.interceptor';
+10- in (config || moodule) put providers provideHttpClient(withInterceptors([loaderInterceptor]) // تسجيل الـ Interceptor هنا
+11-  showLoader: boolean = false; => initial value to get first and editing
+  constructor(private show: LoaderService) {show.isLoading.subscribe((value) => (this.showLoader = value));}
+
+12- in app put condition to appeare or not the loader div => *ngIf="loadingService" > been beeter in single page loader
+
+-->
+<!--
+guard: ng g g  guards/auth canActivate
+1- put in routing module after pathes i need this condition => canActivate: [guard Function],
+2- put the condition in guard Function whate returne boolean to do the condition in canActivate
+3- the consition you want in another component whate condition work in it like Login
+-->
+<!--
+ng-content&ng-container&ng-template: defrence
+1- ng-content: إسقاط المحتوى (Content Projection): يُستخدم لإدراج محتوى من الكومبوننت الأب إلى الكومبوننت الابن.
+  dos't work with Directives
+  select:| يمكن تحديد محتوى معين باستخدام,سيليكت, توضع المسميات كأراي ونحط البروبيرتي جنب تاج العنصر المراد
+
+  2- ng-container: لاضافة عنصر يحتوي علي دايركتف اخر دون ظهور العنصر في الدوم
+  <ng-container *ngIf="user.isAdmin"> <div *ngFor="term of array">{{term}}</div> </ng-container>
+
+  3- ng-template: في حالة عدم تحقق شرط معين في الدوم يظهر هو بمناداته
+
+  <p *ngIf="show; else call"></p>
+  <ng-template #call>ng-template</ng-template>
+-->
+<!--
+lazyloading:
+genetating Module -> ng g m name --routing
+1- استدعاء الكمبوننتس المراده في الروتنج موديول الجديد
+2- استدعاء الموديول الحديد في الموديول روتنج القديم بفنكشن
+3-  {path: 'auth', loadChildren: () => import('./auth/auth/auth.module').then((module) => module.AuthModule),},
+path: 'auth' = الغرض: تحديد المسار الذي سيُطلب في عنوان URL.
+loadChildren: = الغرض: تحميل الوحدة النمطية بشكل كسول (Lazy Loading).
+import('./auth/auth/auth.module'): = الغرض: استيراد الوحدة النمطية ديناميكيًا باستخدام Dynamic Import. import() يُرجع Promise.
+.then((module) => module.AuthModule): = الغرض: تحويل الوعد (Promise) إلى الوحدة النمطية المطلوبة. then() تُستخدم لاستخراج الوحدة النمطية (AuthModule) من الحزمة المحملة.
+
+
+
+-->
+<!--
+_command:
+  for %n in (parent,chiled) do ng g c %n --skip-tests
+-->
