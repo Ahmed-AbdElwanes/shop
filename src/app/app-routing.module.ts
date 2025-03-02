@@ -31,11 +31,6 @@ const routes: Routes = [
     canActivate: [authGuard],
     component: ProductDetailsComponent,
     title: 'productDetails',
-    data: {
-      prerender: {
-        renderMode: 'manual', // التعديل هنا
-      },
-    },
   },
   {
     path: 'carts',
