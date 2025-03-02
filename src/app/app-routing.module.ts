@@ -28,9 +28,9 @@ const routes: Routes = [
 
   {
     path: 'productDetails/:id',
-    canActivate: [authGuard],
     component: ProductDetailsComponent,
     title: 'productDetails',
+    data: { renderMode: 'no-prerendering' }, // أو أي وضع آخر
   },
   {
     path: 'carts',
