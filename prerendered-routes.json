@@ -1,0 +1,15 @@
+{
+  "routes": {
+    "/shop": {},
+    "/shop/about": {},
+    "/shop/auth": {},
+    "/shop/auth/login": {},
+    "/shop/auth/regester": {},
+    "/shop/carts": {},
+    "/shop/contact": {},
+    "/shop/contact/mobile": {},
+    "/shop/contact/web": {},
+    "/shop/home": {},
+    "/shop/productDetails": {}
+  }
+}
