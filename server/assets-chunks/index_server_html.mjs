@@ -3,7 +3,7 @@ export default `<!DOCTYPE html>
   <head>
     <meta charset="utf-8"/>
     <title>Firstappnost</title>
-    <base href="https://Ahmed-AbdElwanes.github.io/shop/"/>
+    <base href="/shop/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="stylesheet" href="styles-OI3QXHWG.css"></head>

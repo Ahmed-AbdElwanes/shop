@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'https://Ahmed-AbdElwanes.github.io/shop',
+  basePath: '/shop',
   supportedLocales: {
   "en-US": ""
 },
