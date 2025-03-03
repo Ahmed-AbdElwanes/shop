@@ -8,6 +8,6 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
 </style><link rel="stylesheet" href="styles-OI3QXHWG.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-OI3QXHWG.css"></noscript></head>
   <body><!--nghm-->
     <app-root ng-version="19.1.7" ngh="1" ng-server-context="ssg"><app-navbar ngh="0"><!----></app-navbar><div class="height-1000"><router-outlet></router-outlet><!----></div></app-root>
-  <link rel="modulepreload" href="chunk-IZXGTB4N.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-YU4HOKP3.js" type="module"></script>
+  <link rel="modulepreload" href="chunk-IZXGTB4N.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-4LXH6YUM.js" type="module"></script>
 
 <script id="ng-state" type="application/json">{"__nghData__":[{"t":{"0":"t0"},"c":{"0":[]}},{"c":{"2":[]}}]}</script></body></html>`;
