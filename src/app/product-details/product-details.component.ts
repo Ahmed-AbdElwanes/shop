@@ -21,13 +21,13 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     console.log(this._route.params); // الداتا الي قلتله هترجعلك في ال path in routing
     this.productId = this._route.snapshot.params['id'];
-    console.log(this.productId);
+    // console.log(this.productId);
     this.getProduct();
   }
   getProduct() {
     this.productsService.getProduct(this.productId).subscribe({
       next: (data) => {
-        console.log(data);
+        // console.log(data);
         this.productInfo = data;
       },
       error: (error) => {
