@@ -89,7 +89,11 @@ export class ChiledComponent {
     const much1 = this.countOroduct;
     this.countOroduct++;
     // return this.productRepeat[much1];
-    return this.productRepeat2[much1];
+    if (this.productRepeat2[much1]) {
+      return this.productRepeat2[much1];
+    } else {
+      return 1;
+    }
     // return 0;
   }
   // remove item

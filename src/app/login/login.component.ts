@@ -68,8 +68,10 @@ export class LoginComponent implements OnInit {
       console.log('not passed check');
     }
 
-    sessionStorage.setItem('autherised', test);
-
+    if (typeof sessionStorage !== 'undefined') {
+      // الوصول إلى sessionStorage هنا
+      sessionStorage.setItem('autherised', test);
+    }
     console.log('worked');
   }
   clearStor() {

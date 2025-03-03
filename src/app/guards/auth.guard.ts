@@ -7,7 +7,7 @@ export const authGuard: CanActivateFn = (route, state) => {
   const auth = sessionStorage.getItem('autherised');
   const router = inject(Router);
   const router2 = inject(Router);
-  if (auth == 'true') {
+  if (auth == 'true' && typeof sessionStorage !== 'undefined') {
     console.log('pathed');
     // router2.navigate(['./home']); //programatic navigation
     return true;
